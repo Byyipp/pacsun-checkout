@@ -106,12 +106,12 @@ func createwebhook(list [][]mapper) *discordgo.WebhookParams {
 			break
 		}
 	}
-	var titty string
+	var temp string
 	test = false
 	for i := range list {
 		for k := range list[i] {
 			if strings.Compare(list[i][k].title, "") != 0 {
-				titty = list[i][k].title
+				temp = list[i][k].title
 				test = true
 				break
 			}
@@ -146,7 +146,7 @@ func createwebhook(list [][]mapper) *discordgo.WebhookParams {
 		Thumbnail: &discordgo.MessageEmbedThumbnail{
 			URL: thumbnail,
 		},
-		Description: titty,
+		Description: temp,
 		Fields:      fields,
 		Footer: &discordgo.MessageEmbedFooter{
 			Text:    "Nuggie AIO - " + time.Now().String(),
