@@ -17,7 +17,7 @@ import (
 	"github.com/bwmarrin/discordgo"
 )
 
-const token string = "ODQ2NDUwMDg3MzkxNTI2OTUy.YKvsEw.24njjK8Q4tCJ6KF7X8RtRaeT6bY"
+const token string = "ODQ2NDUwMDg3MzkxNTI2OT"
 
 var BotID string
 
@@ -150,7 +150,7 @@ func createwebhook(list [][]mapper) *discordgo.WebhookParams {
 		Fields:      fields,
 		Footer: &discordgo.MessageEmbedFooter{
 			Text:    "Nuggie AIO - " + time.Now().String(),
-			IconURL: "https://cdn.discordapp.com/emojis/839655842705571862.png?v=1",
+			IconURL: "",
 		},
 		Color: 16549376,
 	}
